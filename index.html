@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Thu Jul 04 2019 15:46:58 GMT+0000 (UTC)  -->
+<!--  Last Published: Thu Jul 18 2019 08:05:01 GMT+0000 (UTC)  -->
 <html data-wf-page="5d105052927a0510a5f8670e" data-wf-site="5d105052927a053fe5f8670a">
 <head>
   <meta charset="utf-8">
@@ -24,6 +24,26 @@
     window,document,'script','https://www.exploretock.com/tock.js');
     tock('init', 'barbox');
     </script>
+  <script>
+var Airtable = require('airtable');
+var base = new Airtable({apiKey: 'keyjDDV8XGtq35FGy'}).base('appP8I4wJQbkou3zi');
+base('Events').select({
+    // Selecting the first 3 records in Grid view:
+    maxRecords: 3,
+    view: "Grid view"
+}).eachPage(function page(records, fetchNextPage) {
+    // This function (`page`) will get called for each page of records.
+    records.forEach(function(record) {
+        console.log('Retrieved', record.get('Location'));
+    });
+    // To fetch the next page of records, call `fetchNextPage`.
+    // If there are more records, `page` will get called again.
+    // If there are no more records, `done` will get called.
+    fetchNextPage();
+}, function done(err) {
+    if (err) { console.error(err); return; }
+});
+</script>
 </head>
 <body class="body">
   <div class="w-embed">
@@ -61,16 +81,16 @@ body {
     </div>
   </div>
   <div class="about">
-    <div id="about" class="about-wrapper w-container"><img src="images/crew-89808-unsplash.jpg" srcset="images/crew-89808-unsplash-p-1080.jpeg 1080w, images/crew-89808-unsplash-p-1600.jpeg 1600w, images/crew-89808-unsplash-p-2000.jpeg 2000w, images/crew-89808-unsplash-p-2600.jpeg 2600w, images/crew-89808-unsplash-p-3200.jpeg 3200w, images/crew-89808-unsplash.jpg 4000w" sizes="(max-width: 479px) 80vw, (max-width: 767px) 360px, 620px" data-w-id="aba302b8-c275-0339-7159-e08b990cc5b0" alt="" class="image"><img src="images/kim-daniels-1678764-unsplash.jpg" srcset="images/kim-daniels-1678764-unsplash-p-500.jpeg 500w, images/kim-daniels-1678764-unsplash-p-800.jpeg 800w, images/kim-daniels-1678764-unsplash-p-1080.jpeg 1080w, images/kim-daniels-1678764-unsplash-p-1600.jpeg 1600w, images/kim-daniels-1678764-unsplash.jpg 2000w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 210px, (max-width: 991px) 275px, 350px" alt="" class="image-2">
+    <div id="about" class="about-wrapper w-container"><img src="images/crew-89808-unsplash.jpg" srcset="images/crew-89808-unsplash-p-1080.jpeg 1080w, images/crew-89808-unsplash-p-1600.jpeg 1600w, images/crew-89808-unsplash-p-2000.jpeg 2000w, images/crew-89808-unsplash-p-2600.jpeg 2600w, images/crew-89808-unsplash-p-3200.jpeg 3200w, images/crew-89808-unsplash.jpg 4000w" sizes="(max-width: 479px) 80vw, (max-width: 767px) 360px, 620px" alt="" class="image"><img src="images/kim-daniels-1678764-unsplash.jpg" srcset="images/kim-daniels-1678764-unsplash-p-500.jpeg 500w, images/kim-daniels-1678764-unsplash-p-800.jpeg 800w, images/kim-daniels-1678764-unsplash-p-1080.jpeg 1080w, images/kim-daniels-1678764-unsplash-p-1600.jpeg 1600w, images/kim-daniels-1678764-unsplash.jpg 2000w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 210px, (max-width: 991px) 275px, 350px" alt="" class="image-2"><a href="#reservations" class="book-now-button w-button">Book Now</a>
       <div class="about-text">
         <h3 class="h3 align-right">About GOOD SPIRITS</h3>
-        <h2 class="h2"><span><strong>Good Spirits</strong></span> is an experiment in creating community around tasty drinks and local ingredients. Brought to you by <a href="https://keycityspirits.com/" target="_blank">Key City Spirits</a> and <a href="https://www.barbox.co/" target="_blank">Barbox Mobile Bar</a>, Good Spirits pop-up cocktail classes pair the flavors of local distilleries and farmers with the expertise of local mixologists to bring you a curated craft cocktail experience.<br></h2>
+        <h2 class="h2"><span><strong>Good Spirits</strong></span> is an experiment in creating community around tasty drinks and local ingredients. Brought to you by <a href="https://keycityspirits.com/" target="_blank">Key City Spirits</a> and <a href="https://www.barbox.co/" target="_blank">Barbox Mobile Bar</a>, Good Spirits pop-up cocktail classes pair the flavors of local distilleries and farmers with the expertise of local mixologists to bring you a curated craft cocktail experience. Get ready to roll up your sleeves, have fun, and take home some skills to share with your friends and family!<br></h2>
       </div>
     </div>
     <div class="white-background"></div>
   </div>
   <div class="menu">
-    <div id="menu" class="menu-container w-container">
+    <div id="menu" class="book-now-button-right w-container">
       <div class="menu-intro">
         <h3 class="h3">our classes</h3>
         <h1 class="h1">Learn the basics, drink your creations, and leave inspired.</h1>
@@ -94,11 +114,11 @@ body {
               <div class="menu-items-wrapper">
                 <div class="menu-item">
                   <h2 class="h2">Secret location + mixologist</h2>
-                  <div class="text-block-3">Each class begins at 6:30 pm lasting about two hours. The specific location is made available the day before the class. Please using the booking link below for more information.</div>
+                  <div class="text-block-3">Each class begins at 6:30 pm and lasts about two hours. The specific location is made available the day before the class. Please using the booking link below for more information.</div>
                 </div>
                 <div class="menu-item">
                   <h2 class="h2">Learn to make three craft cocktails</h2>
-                  <div class="text-block-3">Each class will teach you the basics of bar setup, and terminology. The instructor will walk you through three unique cocktail recipes tailored for the class using all local spirits and ingredients.</div>
+                  <div class="text-block-3">Each class will teach you the basics of bar setup and terminology. The instructor will walk you through three unique cocktail recipes tailored for the class using all local spirits and ingredients.</div>
                 </div>
                 <div class="menu-item">
                   <h2 class="h2">Light refreshments + Recipes</h2>
@@ -113,7 +133,7 @@ body {
               <div class="separator"></div>
               <div class="menu-items-wrapper">
                 <div class="menu-item">
-                  <div class="text-block-3">Local spirits + local ingredients</div>
+                  <div class="trifold-header">Local spirits + local ingredients</div>
                   <div class="div-block"><img src="images/kcs-tilted-logo.png" alt="Key City Spirits Logo" width="150" height="150" class="image-7">
                     <div class="div-block-2">
                       <h2 class="h2">Key City Spirits represents the finest North Carolina Distilleries and is committed to represent them with the same passion and pride each brand puts into crafting their world-class spirits.</h2>
@@ -127,7 +147,7 @@ body {
               <div class="separator"></div>
               <div class="menu-items-wrapper">
                 <div class="menu-item">
-                  <div class="text-block-3">Mixology + Experiential Design</div>
+                  <div class="trifold-header">Mixology + Experiential Design</div>
                   <div class="div-block"><img src="images/Circle-Badge-Logo.png" alt="Barbox Mobile Bar Logo" width="175" height="175" class="image-7">
                     <div class="div-block-2">
                       <h2 class="h2">Barbox is a mobile bartending company that provides alcohol catering for private events in North Carolina. Partnering local breweries and distilleries, their bar program strives to bring the local community together around food + drink through fostering creative pop-up experiences.</h2>
@@ -139,53 +159,134 @@ body {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div><a href="#reservations" class="book-now-buttono-right w-button">Book Now</a></div>
     <div class="white-background-2"></div>
   </div>
   <div id="reservations" class="reservation">
-    <div class="left-reservation-column"><img src="images/jenna-bollweg-743607-unsplash.jpg" srcset="images/jenna-bollweg-743607-unsplash-p-1080.jpeg 1080w, images/jenna-bollweg-743607-unsplash-p-1600.jpeg 1600w, images/jenna-bollweg-743607-unsplash-p-2000.jpeg 2000w, images/jenna-bollweg-743607-unsplash-p-2600.jpeg 2600w, images/jenna-bollweg-743607-unsplash-p-3200.jpeg 3200w, images/jenna-bollweg-743607-unsplash.jpg 6016w" sizes="(max-width: 479px) 73vw, (max-width: 767px) 70vw, (max-width: 991px) 100vw, 50vw" alt="" class="image-3"></div>
+    <div class="left-reservation-column"><img src="images/jenna-bollweg-743607-unsplash.jpg" srcset="images/jenna-bollweg-743607-unsplash-p-1080.jpeg 1080w, images/jenna-bollweg-743607-unsplash-p-1600.jpeg 1600w, images/jenna-bollweg-743607-unsplash-p-2000.jpeg 2000w, images/jenna-bollweg-743607-unsplash-p-2600.jpeg 2600w, images/jenna-bollweg-743607-unsplash-p-3200.jpeg 3200w, images/jenna-bollweg-743607-unsplash.jpg 6016w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 70vw, (max-width: 991px) 100vw, 50vw" alt="" class="image-3"></div>
     <div class="column">
       <div class="reservations-info">
         <h3 class="h3 align-right">Reserve a class</h3>
-        <h2 class="h2">Each class begins at 6:30 pm and lasts for two hours. Location will be made available the day before the class.</h2><a href="#" class="link">Click here to Book Now</a>
+        <h2 class="h2-reservations">Each class begins at 6:30 pm and lasts about two hours. Location will be made available the day before the class.</h2>
+        <div class="div-block-10">
+          <div class="div-block-11">
+            <div class="w-row">
+              <div class="w-col w-col-8">
+                <div class="book-now-location">Dove &amp; Olive (Not Secret)</div>
+                <div class="book-now-detail">July 26, 2019</div>
+                <div class="book-now-detail">@ 6:30 PM</div>
+              </div>
+              <div class="column-2 w-col w-col-4"><a href="https://www.exploretock.com/barbox/event/private/021d42fe-2e5d-4b10-81eb-c6b4271c39e5" class="button-now-grid w-button">Book Now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="div-block-10">
+          <div class="div-block-11">
+            <div class="w-row">
+              <div class="w-col w-col-8">
+                <div class="book-now-location">Dove &amp; Olive (Not Secret)</div>
+                <div class="book-now-detail">August 9, 2019</div>
+                <div class="book-now-detail">@ 6:30 PM</div>
+              </div>
+              <div class="column-2 w-col w-col-4"><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" class="button-now-grid w-button">Book Now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="div-block-10">
+          <div class="div-block-11">
+            <div class="w-row">
+              <div class="w-col w-col-8">
+                <div class="book-now-location">Dove &amp; Olive (Not Secret)</div>
+                <div class="book-now-detail">August 29th</div>
+                <div class="book-now-detail">@ 6:30 PM</div>
+              </div>
+              <div class="column-2 w-col w-col-4"><a href="https://www.exploretock.com/barbox/event/private/1f35f387-e535-42b1-968f-7c77d51ebdfa" class="button-now-grid w-button">Book Now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="div-block-6">
+          <div class="w-dyn-list">
+            <div class="w-dyn-items">
+              <div class="collection-item w-dyn-item">
+                <div class="div-block-5">
+                  <div class="book-now-location"></div>
+                  <div class="book-now-detail"></div>
+                  <div class="book-now-detail"></div>
+                </div><a href="#" class="button-now-grid w-button">Book Now</a></div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+        </div><a href="#" class="link">Click here to Book Now</a>
+        <div class="time">
+          <div class="text-block">Dove &amp; Olive (Not Secret)<br>Five Points Raleigh<br>Five Points Raleigh</div>
+          <div class="text-block align-right">7/26 @ 6:30 PM<br>8/9 @ 6:30 PM<br>8/23 @ 6:30 PM</div>
+          <div class="text-block align-right"><a href="https://www.exploretock.com/barbox/event/private/021d42fe-2e5d-4b10-81eb-c6b4271c39e5" target="_blank">Book Now<br></a><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" target="_blank">Book Now<br></a><a href="https://www.exploretock.com/barbox/event/private/1f35f387-e535-42b1-968f-7c77d51ebdfa" target="_blank">Book Now</a></div>
+        </div>
         <div class="time-table">
           <div class="div-block-3">
-            <div class="location-name"><strong>Dove &amp; Olive (Not Secret)</strong></div>
+            <div class="location-name">Dove &amp; Olive (Not Secret)</div>
             <div class="date-time">7/26 @ 6:30 PM<br></div>
             <div class="book-now align-right"><a href="https://www.exploretock.com/barbox/event/private/021d42fe-2e5d-4b10-81eb-c6b4271c39e5" target="_blank">Book Now</a><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" target="_blank">‍</a></div>
           </div>
           <div class="div-block-3">
-            <div class="location-name"><strong>Dove &amp; Olive (Not Secret)</strong></div>
-            <div class="date-time">8/9   @ 6:30 PM<br></div>
+            <div class="location-name">Five Points Raleigh</div>
+            <div class="date-time">8/9 @ 6:30 PM<br></div>
             <div class="book-now align-right"><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" target="_blank">Book Now</a><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" target="_blank">‍</a></div>
           </div>
           <div class="div-block-3">
-            <div class="location-name"><strong>Dove &amp; Olive (Not Secret)</strong></div>
-            <div class="date-time">8/9   @ 6:30 PM<br></div>
-            <div class="book-now align-right"><a href="https://www.exploretock.com/barbox/event/private/1f35f387-e535-42b1-968f-7c77d51ebdfa" target="_blank">Book Now</a><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" target="_blank">‍</a></div>
+            <div class="location-name">Five Points Raleigh</div>
+            <div class="date-time">8/9 @ 6:30 PM<br></div>
+            <div class="book-now align-right"><a href="https://www.exploretock.com/barbox/event/private/021d42fe-2e5d-4b10-81eb-c6b4271c39e5" target="_blank">Book Now</a><a href="https://www.exploretock.com/barbox/event/private/e36e8f4d-bad8-4593-a151-9cb44df019b0" target="_blank">‍</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="images">
-    <div class="images-wrapper w-container"><img src="images/marc-babin-625288-unsplash.jpg" srcset="images/marc-babin-625288-unsplash-p-500.jpeg 500w, images/marc-babin-625288-unsplash-p-800.jpeg 800w, images/marc-babin-625288-unsplash-p-1080.jpeg 1080w, images/marc-babin-625288-unsplash-p-1600.jpeg 1600w, images/marc-babin-625288-unsplash-p-2000.jpeg 2000w, images/marc-babin-625288-unsplash-p-2600.jpeg 2600w, images/marc-babin-625288-unsplash.jpg 2695w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 240.015625px, 260.03125px" alt="" class="image-4"><img src="images/lightscape-748406-unsplash.jpg" width="313" srcset="images/lightscape-748406-unsplash-p-1080.jpeg 1080w, images/lightscape-748406-unsplash-p-1600.jpeg 1600w, images/lightscape-748406-unsplash-p-2000.jpeg 2000w, images/lightscape-748406-unsplash-p-2600.jpeg 2600w, images/lightscape-748406-unsplash-p-3200.jpeg 3200w, images/lightscape-748406-unsplash.jpg 5616w" sizes="(max-width: 767px) 100vw, 313px" alt="" class="image-5"></div>
+  <div class="section-2">
+    <div class="w-container">
+      <div class="columns w-row">
+        <div class="w-col w-col-3 w-col-small-small-stack w-col-tiny-3"><img src="images/marc-babin-625288-unsplash.jpg" srcset="images/marc-babin-625288-unsplash-p-500.jpeg 500w, images/marc-babin-625288-unsplash-p-800.jpeg 800w, images/marc-babin-625288-unsplash-p-1080.jpeg 1080w, images/marc-babin-625288-unsplash-p-1600.jpeg 1600w, images/marc-babin-625288-unsplash-p-2000.jpeg 2000w, images/marc-babin-625288-unsplash-p-2600.jpeg 2600w, images/marc-babin-625288-unsplash.jpg 2695w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 167px, 220px" alt="" class="image-4"></div>
+        <div class="column-3 w-col w-col-2 w-col-small-small-stack w-col-tiny-2"></div>
+        <div class="column-4 w-col w-col-7 w-col-small-small-stack w-col-tiny-7">
+          <h3 class="h3 align-right special">Our founders</h3>
+          <div class="collection-item-2"><img src="images/kcs-tilted-logo.png" alt="" class="image-8">
+            <div class="div-block-7">
+              <div class="h2-contact">Key City Spirits</div>
+              <div class="book-now-detail-contact">Key City Spirits represents the finest North Carolina Distilleries and is committed to represent them with the same passion and pride each brand puts into crafting their world-class spirits.</div><a href="https://keycityspirits.com/" target="_blank" class="button-now-grid-contact w-button">Visit Site</a></div>
+          </div>
+          <div class="collection-item-2"><img src="images/Circle-Badge-Logo.png" alt="" class="image-8">
+            <div class="div-block-7">
+              <div class="h2-contact">Barbox Mobile Bartending</div>
+              <div class="book-now-detail-contact">Barbox mobile bartending company provides full bartending services for private events, weddings, and fundraisers. Barbox specializes in creative alcohol catering using experiential event design expertise.</div><a href="https://www.barbox.co" target="_blank" class="button-now-grid-contact w-button">Visit Site</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="footer">
     <div class="footer-container w-container">
       <div class="separator-big"></div>
+      <div class="div-block-9">
+        <div class="footer-info">
+          <h2 class="h2">Location</h2><a href="#reservations" class="location-footer-link">Secret Venues around the Triangle Area</a></div>
+        <div class="footer-info">
+          <h2 class="h2">Follow Us</h2><a href="https://www.instagram.com/mixingoodspirits/" target="_blank" class="footer-bottom-text">Instagram</a></div>
+        <div class="footer-info">
+          <h2 class="h2">Contact Us</h2><a href="tel:+19192304794" class="footer-bottom-text">+1 919 230 4794</a><a href="mailto:mixingoodspirits@gmail.com?subject=Good%20Spirits%20Inquiry" class="link-2">info@thegoodspirits.co</a></div>
+      </div>
       <div class="footer-info-wrapper">
         <div class="footer-info">
-          <h2 class="h2">Location</h2><a href="#reservations" class="link-2">Secret Venues around the Triangle Area</a></div>
+          <h2 class="h2">Location</h2><a href="#reservations" class="location-footer-link">Secret Venues around the Triangle Area</a></div>
         <div class="footer-info">
-          <h2 class="h2">Follow Us</h2><a href="https://www.instagram.com/mixingoodspirits/" target="_blank" class="link-2">Instagram</a></div>
+          <h2 class="h2">Contact Us</h2><a href="tel:+19192304794" class="footer-bottom-text">+1 919 230 4794</a><a href="mailto:mixingoodspirits@gmail.com?subject=Good%20Spirits%20Inquiry" class="link-2">info@thegoodspirits.co</a></div>
         <div class="footer-info">
-          <h2 class="h2">Contact Us</h2><a href="#" class="link-2">+1 919 230 4794</a><a href="mailto:mixingoodspirits@gmail.com?subject=Good%20Spirits%20Inquiry" class="link-2">info@thegoodspirits.co</a></div>
+          <h2 class="h2">Follow Us</h2><a href="https://www.instagram.com/mixingoodspirits/" target="_blank" class="footer-bottom-text">Instagram</a></div>
       </div>
     </div>
   </div>
-  <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>

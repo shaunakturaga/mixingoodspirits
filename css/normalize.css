@@ -1,355 +1,2212 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+.body {
+  background-color: #fefcf6;
 }
-/**
- * Remove default margin.
- */
-body {
-  margin: 0;
+
+.link-nav {
+  margin-left: 50px;
+  font-family: Cousine, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
+
+.link-nav:hover {
+  text-decoration: underline;
 }
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
+
+.h3 {
+  margin-bottom: 30px;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
+
+.h3.align-right {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  text-align: left;
 }
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none;
+
+.h1 {
+  width: 100%;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  font-family: Asul, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 400;
 }
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-a {
-  background-color: transparent;
+
+.navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
-a:active,
-a:hover {
-  outline: 0;
+
+.navigation-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
+
+.navigation-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
+
+.intro {
+  margin-top: 60px;
+  margin-bottom: 10px;
 }
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic;
+
+.image {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 620px;
 }
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+
+.image-2 {
+  position: absolute;
+  left: 30px;
+  bottom: 151px;
+  width: 350px;
 }
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
+
+.white-background {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  width: 65vw;
+  height: 510px;
+  background-color: #fff;
 }
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
+
+.about {
   position: relative;
-  vertical-align: baseline;
+  margin-bottom: 0px;
 }
-sup {
-  top: -0.5em;
+
+.about-wrapper {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 870px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-sub {
-  bottom: -0.25em;
+
+.intro-wrapper {
+  max-width: 99%;
 }
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-img {
-  border: 0;
+
+.about-text {
+  position: absolute;
+  right: -3px;
+  bottom: 137px;
+  display: block;
+  width: 50%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
-  overflow: hidden;
+
+.menu-intro {
+  max-width: 71%;
 }
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px;
+
+.menu {
+  position: relative;
 }
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  box-sizing: content-box;
-  height: 0;
+
+.white-background-2 {
+  position: absolute;
+  top: 4vw;
+  right: 0px;
+  width: 75vw;
+  height: 750px;
+  background-color: #fff;
 }
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-button {
+
+.book-now-button-right {
+  position: relative;
+  z-index: 1;
   overflow: visible;
+  height: 85vh;
 }
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-button,
-select {
-  text-transform: none;
+
+.tab-link {
+  background-color: transparent;
+  font-family: Cousine, sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- * 4. CUSTOM FOR WEBFLOW: Removed the input[type="submit"] selector to reduce
- *    specificity and defer to the .w-button selector
- */
-button,
-html input[type="button"],
-input[type="reset"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
+
+.tab-link.w--current {
+  background-color: transparent;
+  color: #333;
+  text-decoration: underline;
 }
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
+
+.tabs-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 78px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+
+.tabs-wrapper {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 94px;
+  padding-bottom: 0px;
 }
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-input {
-  line-height: normal;
+
+.image-3 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  max-height: 510px;
 }
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+
+.reservation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  margin-top: 113px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+
+.reservations-info {
+  position: absolute;
+  left: 66px;
+  bottom: 91px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.text-block {
+  width: 220px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.text-block.align-right {
+  margin-left: 17px;
+  text-align: left;
+}
+
+.column {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.link {
+  display: none;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  font-family: Cousine, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.time {
+  display: none;
+  width: 100%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  text-align: left;
+}
+
+.images-wrapper {
+  position: relative;
+  height: 390px;
+}
+
+.image-4 {
+  position: relative;
+  left: 64px;
+  top: 0px;
+  max-height: 390px;
+}
+
+.image-5 {
+  position: absolute;
+  right: 278px;
+  bottom: 180px;
   height: auto;
 }
-/**
- * 1. CUSTOM FOR WEBFLOW: changed from `textfield` to `none` to normalize iOS rounded input
- * 2. CUSTOM FOR WEBFLOW: box-sizing: content-box rule removed
- *    (similar to normalize.css >=4.0.0)
- */
-input[type="search"] {
-  -webkit-appearance: none;
-  /* 1 */
+
+.images {
+  margin-bottom: 258px;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+
+.separator-big {
+  height: 1px;
+  background-color: #d8d8d8;
 }
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+
+.h2 {
+  width: 100%;
+  margin: 0px 7px 0px 0px;
+  font-family: Asul, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
 }
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+
+.footer-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
 }
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-textarea {
-  overflow: auto;
+
+.footer-info-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-optgroup {
-  font-weight: bold;
+
+.link-2 {
+  -webkit-transition: color 200ms ease, opacity 200ms ease;
+  transition: color 200ms ease, opacity 200ms ease;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
 }
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+.link-2:hover {
+  color: #333;
+  text-decoration: underline;
 }
-td,
-th {
-  padding: 0;
+
+.text-block-3 {
+  position: static;
+  margin-top: 40px;
+  clear: none;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
 }
+
+.menu-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.tabs {
+  display: block;
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tab-pane {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.menu-items-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.separator {
+  height: 1px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #d8d8d8;
+}
+
+.footer-container {
+  margin-top: 87px;
+}
+
+.logo-header {
+  font-family: Asul, sans-serif;
+  font-size: 22px;
+  line-height: 48px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: none;
+  height: 5vh;
+  clear: none;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  background-color: #fff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  text-align: right;
+}
+
+.book-now-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  font-family: Cousine, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.book-now-nav:hover {
+  text-decoration: underline;
+}
+
+.text-block-4 {
+  margin-right: 26px;
+}
+
+.div-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.image-7 {
+  margin: 6px;
+}
+
+.text-bloc4 {
+  position: static;
+  clear: none;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+}
+
+.vendor-website {
+  position: static;
+  margin-top: 35px;
+  clear: none;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+}
+
+.div-block-2 {
+  margin-left: 18px;
+}
+
+.div-block-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.time-table {
+  display: none;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  text-align: left;
+}
+
+.location-name {
+  width: 220px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.location-name.align-right {
+  margin-left: 17px;
+  text-align: left;
+}
+
+.date-time {
+  width: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.date-time.align-right {
+  margin-left: 17px;
+  text-align: left;
+}
+
+.book-now {
+  width: 220px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.book-now.align-right {
+  width: 80px;
+  margin-left: 17px;
+  text-align: left;
+}
+
+.left-reservation-column {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.location-footer-link {
+  width: 350px;
+  margin-top: 45px;
+  -webkit-transition: color 200ms ease, opacity 200ms ease;
+  transition: color 200ms ease, opacity 200ms ease;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.location-footer-link:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.trifold-header {
+  position: static;
+  margin-top: 0px;
+  clear: none;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  line-height: 24px;
+}
+
+.footer-bottom-text {
+  margin-top: 41px;
+  -webkit-transition: color 200ms ease, opacity 200ms ease;
+  transition: color 200ms ease, opacity 200ms ease;
+  font-family: Cousine, sans-serif;
+  color: #999;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footer-bottom-text:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.book-now-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  margin: 16px 30px 16px 33px;
+  padding: 25px 59px;
+  border: 2px solid #333;
+  background-color: transparent;
+  -webkit-transition: background-color 375ms cubic-bezier(.23, 1, .32, 1);
+  transition: background-color 375ms cubic-bezier(.23, 1, .32, 1);
+  font-family: Asul, sans-serif;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.book-now-button:hover {
+  background-color: #2f323b;
+  color: #fefcf6;
+}
+
+.book-now-buttono-right {
+  position: absolute;
+  left: auto;
+  top: 8%;
+  right: 4%;
+  bottom: auto;
+  margin: 16px 30px 16px 33px;
+  padding: 8px 36px;
+  border: 2px solid #333;
+  background-color: transparent;
+  -webkit-transition: background-color 375ms cubic-bezier(.23, 1, .32, 1);
+  transition: background-color 375ms cubic-bezier(.23, 1, .32, 1);
+  font-family: Asul, sans-serif;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.book-now-buttono-right:hover {
+  background-color: #2f323b;
+  color: #fefcf6;
+}
+
+.grid {
+  margin-top: 12px;
+  grid-auto-flow: row;
+  grid-auto-columns: 0.5fr;
+  grid-auto-rows: 0px;
+  grid-column-gap: 16px;
+  grid-row-gap: 22px;
+  grid-template-areas: "Book-Now Area-3 Area-6" "Area Area-4 Area-7" "Area-2 Area-5 Area-8";
+  -ms-grid-columns: 2fr 16px 1fr 16px 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
+  -ms-grid-rows: minmax(0px, 1.25fr) 22px auto 22px auto;
+  grid-template-rows: minmax(0px, 1.25fr) auto auto;
+}
+
+.text-block-5 {
+  font-family: Asul, sans-serif;
+}
+
+.class-schedule {
+  font-family: Asul, sans-serif;
+  font-size: 14px;
+}
+
+.div-block-4 {
+  margin-top: 16px;
+}
+
+.button-now-grid {
+  position: relative;
+  left: auto;
+  top: 0%;
+  bottom: 0%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  width: 161%;
+  height: 100%;
+  margin-top: -4px;
+  margin-left: 2px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: transparent;
+  -webkit-transition: background-color 325ms cubic-bezier(.23, 1, .32, 1);
+  transition: background-color 325ms cubic-bezier(.23, 1, .32, 1);
+  font-family: Asul, sans-serif;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+}
+
+.button-now-grid:hover {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #333;
+  color: #fefcf6;
+}
+
+.list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.collection-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-block-5 {
+  margin-left: 24px;
+}
+
+.text-block-6 {
+  font-family: Asul, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.book-now-location {
+  margin-bottom: 2px;
+  font-family: Asul, sans-serif;
+  font-size: 17px;
+}
+
+.book-now-detail {
+  margin-top: 3px;
+  margin-left: 17px;
+  font-family: Cousine, sans-serif;
+}
+
+.div-block-6 {
+  display: none;
+  margin-top: 9px;
+  margin-bottom: -3px;
+}
+
+.contact {
+  position: absolute;
+  left: 37%;
+  top: -5%;
+  right: 0%;
+  bottom: auto;
+  display: block;
+  width: 60%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.div-block-7 {
+  margin-bottom: 22px;
+  margin-left: 5px;
+}
+
+.collection-list-wrapper {
+  margin-top: -19px;
+}
+
+.collection-item-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.image-8 {
+  max-height: 120px;
+  max-width: 120px;
+  margin-bottom: 37px;
+}
+
+.button-now-grid-contact {
+  position: relative;
+  left: -283px;
+  top: 22%;
+  right: -32px;
+  bottom: -12%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  width: 30%;
+  height: 27px;
+  margin-top: 7px;
+  margin-right: 5px;
+  margin-left: 299px;
+  padding: 12px 14px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: transparent;
+  -webkit-transition: background-color 325ms cubic-bezier(.23, 1, .32, 1);
+  transition: background-color 325ms cubic-bezier(.23, 1, .32, 1);
+  font-family: Asul, sans-serif;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button-now-grid-contact:hover {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #333;
+  color: #fefcf6;
+}
+
+.h2-contact {
+  width: 100%;
+  margin: 0px 7px 0px 0px;
+  font-family: Asul, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.div-block-9 {
+  display: none;
+}
+
+.form {
+  font-family: Asul, sans-serif;
+}
+
+.container-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 95px;
+  padding-left: 95px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.form-block {
+  position: relative;
+  width: 65%;
+  margin-left: 250px;
+}
+
+.button-now-form {
+  position: relative;
+  left: auto;
+  top: 0%;
+  bottom: 0%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  width: 36%;
+  height: 80%;
+  margin-top: 6px;
+  margin-left: 0px;
+  padding: 3px 27px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: transparent;
+  -webkit-transition: background-color 325ms cubic-bezier(.23, 1, .32, 1);
+  transition: background-color 325ms cubic-bezier(.23, 1, .32, 1);
+  font-family: Asul, sans-serif;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button-now-form:hover {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #333;
+  color: #fefcf6;
+}
+
+.section {
+  margin-top: -202px;
+}
+
+.text-block-7 {
+  display: block;
+}
+
+.div-block-10 {
+  display: block;
+  width: 100%;
+  margin-top: 21px;
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-block-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.column-2 {
+  margin-top: 9px;
+}
+
+.h2-reservations {
+  width: 100%;
+  margin: 0px 7px 0px 0px;
+  font-family: Asul, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.book-now-detail-contact {
+  margin-top: 3px;
+  margin-left: 17px;
+  font-family: Cousine, sans-serif;
+}
+
+.columns {
+  margin-top: 98px;
+}
+
+@media (max-width: 991px) {
+  .link-nav {
+    margin-left: 30px;
+  }
+  .h3.align-right {
+    text-align: left;
+  }
+  .navigation {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .intro {
+    margin-top: -15px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .image-2 {
+    left: 12px;
+    bottom: 138px;
+    width: 275px;
+  }
+  .about {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .about-wrapper {
+    margin-top: 117px;
+  }
+  .intro-wrapper {
+    max-width: 100%;
+  }
+  .about-text {
+    right: 16px;
+    bottom: 135px;
+    width: 380px;
+  }
+  .menu-intro {
+    max-width: 100%;
+  }
+  .menu {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .image-3 {
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 22px;
+  }
+  .reservation {
+    height: 400px;
+    margin-top: 71px;
+  }
+  .reservations-info {
+    left: -27px;
+    bottom: -12px;
+    width: 100%;
+  }
+  .column {
+    width: 80vw;
+    margin-bottom: -46px;
+  }
+  .images-wrapper {
+    position: relative;
+    margin-top: 116px;
+  }
+  .image-4 {
+    left: 13px;
+    max-height: 360px;
+    margin-top: 3px;
+  }
+  .image-5 {
+    left: auto;
+    top: 29%;
+    right: 14%;
+    bottom: 0%;
+    max-height: 180px;
+  }
+  .images {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .h2 {
+    font-size: 18px;
+  }
+  .footer-info-wrapper {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .footer {
+    margin-top: 46px;
+  }
+  .div-block-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .left-reservation-column {
+    width: 0vw;
+    margin-bottom: 137px;
+  }
+  .location-footer-link {
+    width: 200px;
+    margin-top: 30px;
+  }
+  .footer-bottom-text {
+    margin-top: 29px;
+  }
+  .book-now-button {
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    margin-top: -99px;
+    text-align: center;
+  }
+  .book-now-buttono-right {
+    top: -11%;
+  }
+  .button-now-grid {
+    width: 200%;
+  }
+  .contact {
+    right: 16px;
+    bottom: 135px;
+    width: 380px;
+  }
+  .div-block-7 {
+    width: 85%;
+    margin-right: 23px;
+  }
+  .image-8 {
+    max-height: 100px;
+    max-width: 100px;
+  }
+  .button-now-grid-contact {
+    width: 50%;
+    height: 16px;
+    margin-left: 298px;
+    padding: 12px 0px;
+  }
+  .h2-contact {
+    font-size: 18px;
+  }
+  .container-2 {
+    padding-right: 19px;
+    padding-left: 45px;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .form-block {
+    width: 100%;
+    margin-left: -22px;
+  }
+  .section {
+    margin-top: -180px;
+  }
+  .section-2 {
+    margin-top: 122px;
+  }
+  .column-3 {
+    display: none;
+  }
+  .column-4 {
+    padding-left: 50px;
+  }
+  .h2-reservations {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .link-nav {
+    margin-left: 23px;
+  }
+  .h3.align-right {
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  .navigation-wrapper {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  .links-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+  .image {
+    width: 360px;
+  }
+  .image-2 {
+    bottom: 210px;
+    width: 210px;
+  }
+  .white-background {
+    height: 450px;
+  }
+  .about-wrapper {
+    height: 660px;
+  }
+  .about-text {
+    right: -7px;
+    bottom: 150px;
+    width: 280px;
+    margin-top: 0px;
+  }
+  .menu {
+    margin-top: -105px;
+  }
+  .image-3 {
+    position: static;
+    left: 0px;
+    top: 0px;
+    right: auto;
+    max-height: 240px;
+  }
+  .reservation {
+    height: 300px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .reservations-info {
+    position: static;
+    left: 30px;
+    top: 0px;
+    right: 30px;
+    bottom: auto;
+    width: 100%;
+    margin-top: -96px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .column {
+    position: static;
+    width: 100vw;
+    margin-bottom: 34px;
+    padding-right: 30px;
+    padding-left: 30px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .time {
+    width: 100%;
+  }
+  .images-wrapper {
+    top: 21px;
+    bottom: 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .image-4 {
+    display: none;
+  }
+  .image-5 {
+    bottom: 0px;
+    display: none;
+  }
+  .images {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    margin-top: 428px;
+    margin-bottom: auto;
+    margin-left: -163px;
+    padding-right: 0px;
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .separator-big {
+    height: 20px;
+    background-color: transparent;
+  }
+  .h2 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .footer-info {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .footer-info-wrapper {
+    display: none;
+    margin-top: 337px;
+    margin-bottom: 40px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .footer {
+    height: 500px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .text-block-3 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .footer-container {
+    height: 300px;
+  }
+  .time-table {
+    width: 100%;
+  }
+  .left-reservation-column {
+    position: static;
+    width: 100vw;
+    padding-right: 30px;
+    padding-left: 30px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .location-footer-link {
+    width: 350px;
+    margin-top: 23px;
+  }
+  .footer-bottom-text {
+    margin-top: 24px;
+  }
+  .book-now-buttono-right {
+    top: -4%;
+  }
+  .button-now-grid {
+    width: 100%;
+  }
+  .div-block-6 {
+    width: 100vw;
+  }
+  .contact {
+    position: relative;
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    width: 80vw;
+    height: 500px;
+    margin-top: 0px;
+    margin-left: 205px;
+  }
+  .div-block-7 {
+    width: 148%;
+    margin-right: 33px;
+    margin-left: 8px;
+  }
+  .collection-list-wrapper {
+    width: 100%;
+  }
+  .collection-item-2 {
+    width: 89vw;
+  }
+  .h2-contact {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .collection-list {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .div-block-8 {
+    width: 80vw;
+  }
+  .div-block-9 {
+    display: block;
+  }
+  .form {
+    margin-top: 29px;
+  }
+  .container-2 {
+    margin-top: 158px;
+    padding-right: 0px;
+    padding-left: 0px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+  .form-block {
+    width: 80%;
+    margin-left: 51px;
+  }
+  .section-2 {
+    margin-top: 567px;
+  }
+  .h2-reservations {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 479px) {
+  .body {
+    height: auto;
+  }
+  .link-nav {
+    margin-left: 0px;
+    font-size: 11px;
+  }
+  .h3 {
+    margin-bottom: 15px;
+  }
+  .h3.align-right {
+    margin-top: 16px;
+    margin-left: 0px;
+  }
+  .h3.align-right.special {
+    margin-left: -110px;
+  }
+  .h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .navigation {
+    overflow: hidden;
+    height: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .navigation-container {
+    margin-top: 30px;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .navigation-wrapper {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .links-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .intro {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .image {
+    right: auto;
+    width: 80%;
+    margin-top: 36px;
+  }
+  .image-2 {
+    left: 0px;
+    top: 100px;
+    bottom: auto;
+    display: none;
+    width: 180px;
+  }
+  .about {
+    top: -51px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .about-wrapper {
+    bottom: 27px;
+    height: 600px;
+    margin-top: 90px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .about-text {
+    left: 20px;
+    right: 20px;
+    bottom: 97px;
+    width: auto;
+    margin-top: -2px;
+    padding-top: 0px;
+  }
+  .menu {
+    top: -79px;
+    overflow: hidden;
+    margin-bottom: -168px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .white-background-2 {
+    height: 960px;
+  }
+  .book-now-button-right {
+    height: 700px;
+  }
+  .tab-link {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .tabs-wrapper {
+    margin-bottom: 90px;
+  }
+  .image-3 {
+    max-height: auto;
+    max-width: 100%;
+    margin-top: -42px;
+  }
+  .reservation {
+    overflow: hidden;
+    height: auto;
+  }
+  .reservations-info {
+    margin-top: -9px;
+  }
+  .text-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 8px;
+    line-height: 32px;
+  }
+  .text-block.align-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .column {
+    margin-top: -14px;
+    margin-bottom: 29px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .link {
+    margin-top: 17px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .images-wrapper {
+    display: block;
+    height: 370px;
+    margin-top: -39px;
+    margin-bottom: 60px;
+  }
+  .image-4 {
+    display: none;
+    max-height: 210px;
+  }
+  .image-5 {
+    max-height: 120px;
+  }
+  .images {
+    position: static;
+    top: 306px;
+    display: none;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 90px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .separator-big {
+    background-color: transparent;
+  }
+  .h2 {
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .link-2 {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .footer {
+    margin-top: auto;
+  }
+  .text-block-3 {
+    width: 95%;
+    margin-top: 21px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .menu-item {
+    width: 100%;
+    margin-bottom: -7px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .menu-items-wrapper {
+    height: auto;
+  }
+  .separator {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .image-6 {
+    height: 18px;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .footer-container {
+    margin-top: 31px;
+  }
+  .logo-header {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .div-block {
+    height: 500px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .image-7 {
+    margin-bottom: 41px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  .div-block-2 {
+    height: 800px;
+    margin-left: 0px;
+  }
+  .div-block-3 {
+    margin-bottom: 7px;
+  }
+  .location-name {
+    width: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 8px;
+    line-height: 32px;
+  }
+  .location-name.align-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .date-time {
+    width: 88px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 32px;
+  }
+  .date-time.align-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .book-now {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 8px;
+    line-height: 32px;
+  }
+  .book-now.align-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    font-size: 12px;
+  }
+  .left-reservation-column {
+    margin-top: 85px;
+    margin-bottom: 29px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .location-footer-link {
+    width: 200px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .location-footer-link.w--current {
+    margin-top: 23px;
+  }
+  .trifold-header {
+    width: 95%;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .footer-bottom-text {
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .book-now-button {
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    margin: -60px 34px 5px;
+    padding: 16px 68px;
+    text-align: center;
+  }
+  .book-now-buttono-right {
+    top: -1%;
+    right: -7%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 14px;
+  }
+  .grid {
+    grid-auto-flow: column;
+    grid-column-gap: 22px;
+    grid-row-gap: 22px;
+  }
+  .button-now-grid {
+    width: 80%;
+    height: 50px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collection-item {
+    margin-top: 23px;
+    margin-bottom: 13px;
+    margin-left: -17px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .book-now-detail {
+    width: 150%;
+    margin-top: 8px;
+    margin-left: 1px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .contact {
+    position: absolute;
+    left: -36px;
+    right: 97px;
+    bottom: 110px;
+    z-index: 1;
+    width: 500px;
+    margin-top: -2px;
+    padding-top: 0px;
+  }
+  .collection-list-wrapper {
+    margin-left: 17px;
+  }
+  .collection-item-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .image-8 {
+    margin-bottom: 1px;
+    margin-left: -243px;
+  }
+  .button-now-grid-contact {
+    width: 100%;
+    height: 40px;
+    margin-top: 9px;
+    margin-bottom: 3px;
+    margin-left: 221px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .h2-contact {
+    margin-top: 13px;
+    margin-left: -63px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .collection-list {
+    width: 100vw;
+    margin-right: -81px;
+    margin-left: -68px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .div-block-8 {
+    width: 100vw;
+    margin-left: -25px;
+  }
+  .form-block {
+    width: 90%;
+    margin-top: 48px;
+    margin-left: 15px;
+  }
+  .button-now-form {
+    width: 80%;
+    height: 50px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .field-label {
+    font-size: 12px;
+  }
+  .field-label-2 {
+    font-size: 12px;
+  }
+  .section-2 {
+    margin-top: 0px;
+  }
+  .h2-reservations {
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .book-now-detail-contact {
+    width: 150%;
+    margin-top: 8px;
+    margin-left: -60px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
