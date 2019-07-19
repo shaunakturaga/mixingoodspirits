@@ -661,7 +661,7 @@
 
 .vendor-website {
   position: static;
-  margin-top: 35px;
+  margin-top: 5px;
   clear: none;
   font-family: Cousine, sans-serif;
   color: #999;
@@ -1864,7 +1864,7 @@
     height: 960px;
   }
   .book-now-button-right {
-    height: 700px;
+    height: 800px;
   }
   .tab-link {
     padding-right: 15px;
@@ -1947,8 +1947,8 @@
   }
   .text-block-3 {
     width: 95%;
-    margin-top: 21px;
-    margin-bottom: 16px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     font-size: 13px;
     line-height: 17px;
   }
@@ -1979,7 +1979,7 @@
     line-height: 36px;
   }
   .div-block {
-    height: 500px;
+    height: 550px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
